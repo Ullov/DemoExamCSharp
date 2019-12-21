@@ -11,6 +11,21 @@
     <AssemblyName>WindowsFormsApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,23 +59,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorMenu.Designer.cs">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChasityList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChasityList.Designer.cs">
+      <DependentUpon>ChasityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorMenu.Designer.cs">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMessageBoxTextOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBoxTextOnly.Designer.cs">
+      <DependentUpon>CustomMessageBoxTextOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="demoExamDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="ThanksForRunnerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="ThanksForRunnerRegistration.Designer.cs">
+      <DependentUpon>ThanksForRunnerRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Form11.cs">
       <SubType>Form</SubType>
@@ -68,35 +124,35 @@
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="RunnerSponsor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="RunnerSponsor.Designer.cs">
+      <DependentUpon>RunnerSponsor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="MarathonRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="MarathonRegistration.Designer.cs">
+      <DependentUpon>MarathonRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="RunnerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="RunnerRegistration.Designer.cs">
+      <DependentUpon>RunnerRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
+    <Compile Include="RunnerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="RunnerMenu.Designer.cs">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="ThanksForDonat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="ThanksForDonat.Designer.cs">
+      <DependentUpon>ThanksForDonat.cs</DependentUpon>
     </Compile>
     <Compile Include="Form10.cs">
       <SubType>Form</SubType>
@@ -104,17 +160,17 @@
     <Compile Include="Form10.Designer.cs">
       <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Authorisation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Authorisation.Designer.cs">
+      <DependentUpon>Authorisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs">
+    <Compile Include="InteractiveMap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form12.Designer.cs">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <Compile Include="InteractiveMap.Designer.cs">
+      <DependentUpon>InteractiveMap.cs</DependentUpon>
     </Compile>
     <Compile Include="myDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -123,41 +179,61 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimerHandler.cs" />
+    <EmbeddedResource Include="AdministratorMenu.resx">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChasityList.resx">
+      <DependentUpon>ChasityList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorMenu.resx">
+      <DependentUpon>CoordinatorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBoxTextOnly.resx">
+      <DependentUpon>CustomMessageBoxTextOnly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanksForRunnerRegistration.resx">
+      <DependentUpon>ThanksForRunnerRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="RunnerSponsor.resx">
+      <DependentUpon>RunnerSponsor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="MarathonRegistration.resx">
+      <DependentUpon>MarathonRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="RunnerRegistration.resx">
+      <DependentUpon>RunnerRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="RunnerMenu.resx">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="ThanksForDonat.resx">
+      <DependentUpon>ThanksForDonat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Authorisation.resx">
+      <DependentUpon>Authorisation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form12.resx">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <EmbeddedResource Include="InteractiveMap.resx">
+      <DependentUpon>InteractiveMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,6 +244,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="demoExamDbDataSet.xsc">
+      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="demoExamDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>demoExamDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="demoExamDbDataSet.xss">
+      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="myDbDataSet.xsc">
       <DependentUpon>myDbDataSet.xsd</DependentUpon>
     </None>
@@ -191,6 +278,70 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\arise-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\aves-do-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\clara-santos-oliveira-institute-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\conquer-cancer-brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\diabetes-brazil-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\heart-health-sao-paulo-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\human-rights-centre-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\oxfam-international-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\querstadtein-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\save-the-children-fund-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\stay-pumped-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\the-red-cross-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\upbeat-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-charity-data\wwsm-rescue-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoImages\banco-banespa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoImages\ibirapuera-park-lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoImages\marathon-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoImages\teatro-municipal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marathon-skills-2016-marathon-map.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

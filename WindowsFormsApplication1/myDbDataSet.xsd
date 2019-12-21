@@ -6,51 +6,14 @@
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="g71_Below_SaidakhmatovConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="g71_Below_SaidakhmatovConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.g71_Below_SaidakhmatovConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
-        <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewRunnerInfoTableAdapter" GeneratorDataComponentClassName="ViewRunnerInfoTableAdapter" Name="ViewRunnerInfo" UserDataComponentName="ViewRunnerInfoTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="g71_Below_SaidakhmatovConnectionString (Settings)" DbObjectName="g71_Below_Saidakhmatov.dbo.ViewRunnerInfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Expr1, RunnerId FROM dbo.ViewRunnerInfo</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
-              <Mapping SourceColumn="RunnerId" DataSetColumn="RunnerId" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-        </Tables>
+        <Tables />
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="g71_Below_SaidakhmatovDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="g71_Below_SaidakhmatovDataSet" msprop:Generator_UserDSName="g71_Below_SaidakhmatovDataSet">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ViewRunnerInfo" msprop:Generator_TableClassName="ViewRunnerInfoDataTable" msprop:Generator_TableVarName="tableViewRunnerInfo" msprop:Generator_TablePropName="ViewRunnerInfo" msprop:Generator_RowDeletingName="ViewRunnerInfoRowDeleting" msprop:Generator_RowChangingName="ViewRunnerInfoRowChanging" msprop:Generator_RowEvHandlerName="ViewRunnerInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewRunnerInfoRowDeleted" msprop:Generator_UserTableName="ViewRunnerInfo" msprop:Generator_RowChangedName="ViewRunnerInfoRowChanged" msprop:Generator_RowEvArgName="ViewRunnerInfoRowChangeEvent" msprop:Generator_RowClassName="ViewRunnerInfoRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="167" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="RunnerId" msprop:Generator_ColumnVarNameInTable="columnRunnerId" msprop:Generator_ColumnPropNameInRow="RunnerId" msprop:Generator_ColumnPropNameInTable="RunnerIdColumn" msprop:Generator_UserColumnName="RunnerId" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:choice>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ViewRunnerInfo" />
-      <xs:field xpath="mstns:RunnerId" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

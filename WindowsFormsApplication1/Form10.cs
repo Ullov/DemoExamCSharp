@@ -30,5 +30,11 @@ namespace WindowsFormsApplication1
             TimeSpan ts = endTime.Subtract(DateTime.Now);
             label4.Text = ts.ToString("d' дней 'hh' часов и 'mm' минут до старта марафона'");
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ChasityList cl = new ChasityList();
+            cl.Show();
+        }
     }
 }

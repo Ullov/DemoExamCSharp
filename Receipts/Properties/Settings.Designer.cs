@@ -33,5 +33,15 @@ namespace Receipts.Properties {
                 return ((string)(this["demoExamDbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Volk-ПК\\SQLEXPRESS;Initial Catalog=Receipts;Integrated Security=True")]
+        public string ReceiptsSqlConnectionString {
+            get {
+                return ((string)(this["ReceiptsSqlConnectionString"]));
+            }
+        }
     }
 }

@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.demoExamDbDataSet = new Receipts.demoExamDbDataSet();
+            this.receiptsDataSet = new Receipts.ReceiptsDataSet();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.foodTableAdapter = new Receipts.demoExamDbDataSetTableAdapters.FoodTableAdapter();
+            this.foodTableAdapter = new Receipts.ReceiptsDataSetTableAdapters.FoodTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.measurementUnitsIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partsOfFoodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wayOfPreparingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.howPrepareIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.demoExamDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 18);
+            this.label1.Location = new System.Drawing.Point(252, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 29);
             this.label1.TabIndex = 1;
@@ -63,26 +63,25 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.measurementUnitsIdDataGridViewTextBoxColumn,
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn,
+            this.partsOfFoodDataGridViewTextBoxColumn,
             this.nnameDataGridViewTextBoxColumn,
-            this.wayOfPreparingIdDataGridViewTextBoxColumn});
+            this.howPrepareIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.foodBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(560, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(559, 231);
             this.dataGridView1.TabIndex = 2;
             // 
-            // demoExamDbDataSet
+            // receiptsDataSet
             // 
-            this.demoExamDbDataSet.DataSetName = "demoExamDbDataSet";
-            this.demoExamDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.receiptsDataSet.DataSetName = "ReceiptsDataSet";
+            this.receiptsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // foodBindingSource
             // 
             this.foodBindingSource.DataMember = "Food";
-            this.foodBindingSource.DataSource = this.demoExamDbDataSet;
+            this.foodBindingSource.DataSource = this.receiptsDataSet;
             // 
             // foodTableAdapter
             // 
@@ -102,12 +101,12 @@
             this.measurementUnitsIdDataGridViewTextBoxColumn.Name = "measurementUnitsIdDataGridViewTextBoxColumn";
             this.measurementUnitsIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // partsOfFoodAndNumberDataGridViewTextBoxColumn
+            // partsOfFoodDataGridViewTextBoxColumn
             // 
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn.DataPropertyName = "partsOfFoodAndNumber";
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn.HeaderText = "partsOfFoodAndNumber";
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn.Name = "partsOfFoodAndNumberDataGridViewTextBoxColumn";
-            this.partsOfFoodAndNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partsOfFoodDataGridViewTextBoxColumn.DataPropertyName = "partsOfFood";
+            this.partsOfFoodDataGridViewTextBoxColumn.HeaderText = "partsOfFood";
+            this.partsOfFoodDataGridViewTextBoxColumn.Name = "partsOfFoodDataGridViewTextBoxColumn";
+            this.partsOfFoodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nnameDataGridViewTextBoxColumn
             // 
@@ -116,25 +115,25 @@
             this.nnameDataGridViewTextBoxColumn.Name = "nnameDataGridViewTextBoxColumn";
             this.nnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // wayOfPreparingIdDataGridViewTextBoxColumn
+            // howPrepareIdDataGridViewTextBoxColumn
             // 
-            this.wayOfPreparingIdDataGridViewTextBoxColumn.DataPropertyName = "wayOfPreparingId";
-            this.wayOfPreparingIdDataGridViewTextBoxColumn.HeaderText = "wayOfPreparingId";
-            this.wayOfPreparingIdDataGridViewTextBoxColumn.Name = "wayOfPreparingIdDataGridViewTextBoxColumn";
-            this.wayOfPreparingIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.howPrepareIdDataGridViewTextBoxColumn.DataPropertyName = "howPrepareId";
+            this.howPrepareIdDataGridViewTextBoxColumn.HeaderText = "howPrepareId";
+            this.howPrepareIdDataGridViewTextBoxColumn.Name = "howPrepareIdDataGridViewTextBoxColumn";
+            this.howPrepareIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 262);
+            this.ClientSize = new System.Drawing.Size(584, 284);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.demoExamDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,14 +143,14 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private demoExamDbDataSet demoExamDbDataSet;
+        private ReceiptsDataSet receiptsDataSet;
         private System.Windows.Forms.BindingSource foodBindingSource;
-        private demoExamDbDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
+        private ReceiptsDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn measurementUnitsIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partsOfFoodAndNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partsOfFoodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wayOfPreparingIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn howPrepareIdDataGridViewTextBoxColumn;
     }
 }
 

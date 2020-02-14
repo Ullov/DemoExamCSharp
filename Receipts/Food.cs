@@ -18,10 +18,10 @@ namespace Receipts
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "demoExamDbDataSet.Food". При необходимости она может быть перемещена или удалена.
-            this.foodTableAdapter.Fill(this.demoExamDbDataSet.Food);
-
+        {// TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.Food". При необходимости она может быть перемещена или удалена.
+            this.foodTableAdapter.Fill(this.receiptsDataSet.Food);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.Food". При необходимости она может быть перемещена или удалена.
+            this.foodTableAdapter.Fill(this.receiptsDataSet.Food);
         }
     }
 }

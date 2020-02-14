@@ -19,9 +19,8 @@ namespace Receipts
 
         private void PartOfFood_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "demoExamDbDataSet.PartsOfFood". При необходимости она может быть перемещена или удалена.
-            this.partsOfFoodTableAdapter.Fill(this.demoExamDbDataSet.PartsOfFood);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.PartsOfFood". При необходимости она может быть перемещена или удалена.
+            this.partsOfFoodTableAdapter.Fill(this.receiptsDataSet.PartsOfFood);
         }
     }
 }

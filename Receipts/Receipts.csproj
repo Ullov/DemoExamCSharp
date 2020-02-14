@@ -74,22 +74,11 @@
       <DependentUpon>AddPartOfFood.cs</DependentUpon>
     </Compile>
     <Compile Include="DbHandler.cs" />
-    <Compile Include="demoExamDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Food.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Food.Designer.cs">
       <DependentUpon>Food.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FoodInDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FoodInDetails.Designer.cs">
-      <DependentUpon>FoodInDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="PartOfFood.cs">
       <SubType>Form</SubType>
@@ -99,6 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiptsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,9 +107,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Food.resx">
       <DependentUpon>Food.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FoodInDetails.resx">
-      <DependentUpon>FoodInDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartOfFood.resx">
       <DependentUpon>PartOfFood.cs</DependentUpon>
@@ -132,17 +123,6 @@
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="demoExamDbDataSet.xsc">
-      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="demoExamDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>demoExamDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="demoExamDbDataSet.xss">
-      <DependentUpon>demoExamDbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +132,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReceiptsDataSet.xsc">
+      <DependentUpon>ReceiptsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReceiptsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReceiptsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReceiptsDataSet.xss">
+      <DependentUpon>ReceiptsDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -16,7 +16,7 @@ namespace Receipts
             con.Open();
         }
 
-        private const string source = "Data Source=ULLOV-PC\\SQLEXPRESS;Initial Catalog=demoExamDb;Integrated Security=True";
+        private const string source = "Data Source=Volk-ПК\\SQLEXPRESS;Initial Catalog=Receipts;Integrated Security=True";
         SqlConnection con;
 
         public SqlDataReader read(string query)
@@ -29,6 +29,12 @@ namespace Receipts
         {
             SqlCommand sc = new SqlCommand(query, con);
             sc.ExecuteNonQuery();
+        }
+
+        public int getMaxId(string dbName, string idName)
+        {
+            SqlCommand sc = new SqlCommand("select max(" + idName + ") as maxId from " + dbName, con);
+            return Int32.Parse(sc.ExecuteScalar().ToString());
         }
     }
 }

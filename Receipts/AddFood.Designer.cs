@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.partsOfFoodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.measurementUnitsTableAdapter = new Receipts.ReceiptsDataSetTableAdapters.MeasurementUnitsTableAdapter();
@@ -48,24 +49,20 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.howPrepareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.howPrepareTableAdapter = new Receipts.ReceiptsDataSetTableAdapters.HowPrepareTableAdapter();
-            this.partsOfFoodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partsOfFoodTableAdapter = new Receipts.ReceiptsDataSetTableAdapters.PartsOfFoodTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.measurementUnitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.howPrepareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsOfFoodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.howPrepareBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.measurementUnitsBindingSource;
-            this.comboBox1.DisplayMember = "unit";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 66);
+            this.comboBox1.Location = new System.Drawing.Point(194, 61);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
+            this.comboBox1.Size = new System.Drawing.Size(223, 20);
             this.comboBox1.TabIndex = 20;
-            this.comboBox1.ValueMember = "id";
             // 
             // measurementUnitsBindingSource
             // 
@@ -79,16 +76,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 15);
+            this.textBox1.Location = new System.Drawing.Point(194, 14);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 20);
+            this.textBox1.Size = new System.Drawing.Size(223, 19);
             this.textBox1.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 63);
+            this.label4.Location = new System.Drawing.Point(12, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 23);
             this.label4.TabIndex = 16;
@@ -98,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 38);
+            this.label3.Location = new System.Drawing.Point(12, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 23);
             this.label3.TabIndex = 15;
@@ -108,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(423, 9);
+            this.label1.Location = new System.Drawing.Point(423, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 14;
@@ -118,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 12);
+            this.label2.Location = new System.Drawing.Point(12, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 23);
             this.label2.TabIndex = 13;
@@ -126,29 +123,31 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataSource = this.partsOfFoodBindingSource;
-            this.comboBox2.DisplayMember = "nname";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(613, 15);
+            this.comboBox2.Location = new System.Drawing.Point(613, 14);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(223, 21);
+            this.comboBox2.Size = new System.Drawing.Size(223, 20);
             this.comboBox2.TabIndex = 21;
-            this.comboBox2.ValueMember = "id";
+            // 
+            // partsOfFoodBindingSource
+            // 
+            this.partsOfFoodBindingSource.DataMember = "PartsOfFood";
+            this.partsOfFoodBindingSource.DataSource = this.receiptsDataSet;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(194, 41);
+            this.comboBox3.Location = new System.Drawing.Point(194, 38);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(223, 21);
+            this.comboBox3.Size = new System.Drawing.Size(223, 20);
             this.comboBox3.TabIndex = 22;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.button1.Location = new System.Drawing.Point(168, 132);
+            this.button1.Location = new System.Drawing.Point(168, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 34);
+            this.button1.Size = new System.Drawing.Size(147, 31);
             this.button1.TabIndex = 23;
             this.button1.Text = "Добавить блюдо";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,7 +161,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(423, 41);
+            this.label5.Location = new System.Drawing.Point(423, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 23);
             this.label5.TabIndex = 24;
@@ -172,7 +171,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 86);
+            this.label6.Location = new System.Drawing.Point(12, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 23);
             this.label6.TabIndex = 25;
@@ -182,7 +181,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(190, 90);
+            this.label7.Location = new System.Drawing.Point(190, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 23);
             this.label7.TabIndex = 26;
@@ -191,9 +190,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.button2.Location = new System.Drawing.Point(512, 80);
+            this.button2.Location = new System.Drawing.Point(512, 74);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(299, 34);
+            this.button2.Size = new System.Drawing.Size(299, 31);
             this.button2.TabIndex = 27;
             this.button2.Text = "Добавить ингредиент в блюдо";
             this.button2.UseVisualStyleBackColor = true;
@@ -201,9 +200,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(613, 42);
+            this.textBox2.Location = new System.Drawing.Point(613, 39);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 20);
+            this.textBox2.Size = new System.Drawing.Size(223, 19);
             this.textBox2.TabIndex = 28;
             // 
             // howPrepareBindingSource
@@ -215,20 +214,15 @@
             // 
             this.howPrepareTableAdapter.ClearBeforeFill = true;
             // 
-            // partsOfFoodBindingSource
-            // 
-            this.partsOfFoodBindingSource.DataMember = "PartsOfFood";
-            this.partsOfFoodBindingSource.DataSource = this.receiptsDataSet;
-            // 
             // partsOfFoodTableAdapter
             // 
             this.partsOfFoodTableAdapter.ClearBeforeFill = true;
             // 
             // AddFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 191);
+            this.ClientSize = new System.Drawing.Size(886, 176);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
@@ -245,11 +239,10 @@
             this.Controls.Add(this.label2);
             this.Name = "AddFood";
             this.Text = "AddFood";
-            this.Load += new System.EventHandler(this.AddFood_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.measurementUnitsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.howPrepareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsOfFoodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.howPrepareBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

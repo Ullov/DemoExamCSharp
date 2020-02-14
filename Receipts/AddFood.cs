@@ -20,17 +20,9 @@ namespace Receipts
             label7.Text = "";
 
             DbHandler dbh = new DbHandler();
-            SqlDataReader sdr = dbh.read("select * from HowPrepare");
-            Dictionary<int, string> comboboxItems = new Dictionary<int, string>();
-            while (sdr.Read())
-            {
-                // [0][int32]id;[1][string]nname;[2][bool]isForFood
-                if (sdr.GetBoolean(2) == true)
-                    comboboxItems.Add(sdr.GetInt32(0), sdr.GetString(1));//comboBox2.Items.Add(sdr.GetInt32(0).ToString(), sdr.GetString(1));
-            }
-            comboBox3.DataSource = new BindingSource(comboboxItems, null);
-            comboBox3.DisplayMember = "Value";
-            comboBox3.ValueMember = "Key";
+            dbh.addItemsToComboBox(comboBox3, 0, 1, "HowPrepare", 2);
+            dbh.addItemsToComboBox(comboBox1, 0, 1, "MeasurementUnits", -1);
+            dbh.addItemsToComboBox(comboBox2, 0, 1, "PartsOfFood", -1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,17 +35,7 @@ namespace Receipts
             ingr.Remove(ingr.Length - 1);
             DbHandler dbh = new DbHandler();
             dbh.write("insert into Food (measurementUnitsId, nname, howPrepareId, partsOfFood) values ('" + comboBox1.SelectedValue + "','" + textBox1.Text + "','" + comboBox3.SelectedValue + "','" + ingr + "')");
-        }
-
-        private void AddFood_Load_1(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.PartsOfFood". При необходимости она может быть перемещена или удалена.
-            this.partsOfFoodTableAdapter.Fill(this.receiptsDataSet.PartsOfFood);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.HowPrepare". При необходимости она может быть перемещена или удалена.
-            this.howPrepareTableAdapter.Fill(this.receiptsDataSet.HowPrepare);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "receiptsDataSet.MeasurementUnits". При необходимости она может быть перемещена или удалена.
-            this.measurementUnitsTableAdapter.Fill(this.receiptsDataSet.MeasurementUnits);
-
+            textBox1.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)

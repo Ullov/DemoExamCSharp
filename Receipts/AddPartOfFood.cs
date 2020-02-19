@@ -31,6 +31,7 @@ namespace Receipts
                 textBox1.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
+                dbh.showHideLabel(label6);
             }
             catch { }
         }

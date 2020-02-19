@@ -174,5 +174,19 @@ namespace Receipts
             timedLabel.Visible = false;
             timer.Stop();
         }
+
+        public void update(string query)
+        {
+            openConnection();
+            SqlCommand sc = new SqlCommand(query, con);
+            sc.ExecuteNonQuery();
+        }
+
+        public void delete(string query)
+        {
+            openConnection();
+            SqlCommand sc = new SqlCommand(query, con);
+            sc.ExecuteNonQuery();
+        }
     }
 }

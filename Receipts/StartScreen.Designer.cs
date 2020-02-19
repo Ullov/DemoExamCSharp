@@ -115,6 +115,7 @@
             this.button7.TabIndex = 18;
             this.button7.Text = "Удалить блюда";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -125,6 +126,7 @@
             this.button8.TabIndex = 19;
             this.button8.Text = "Удалить ингредиенты";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -135,6 +137,7 @@
             this.button9.TabIndex = 20;
             this.button9.Text = "Искать блюда";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -145,6 +148,7 @@
             this.button10.TabIndex = 21;
             this.button10.Text = "Искать ингредиенты";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // StartScreen
             // 

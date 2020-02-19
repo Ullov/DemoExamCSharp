@@ -86,6 +86,30 @@
       <DependentUpon>ChangePartsOfFood.cs</DependentUpon>
     </Compile>
     <Compile Include="DbHandler.cs" />
+    <Compile Include="DeleteFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteFood.Designer.cs">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePartsOfFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePartsOfFood.Designer.cs">
+      <DependentUpon>DeletePartsOfFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindFood.Designer.cs">
+      <DependentUpon>FindFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindPartsOfFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindPartsOfFood.Designer.cs">
+      <DependentUpon>FindPartsOfFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Food.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +146,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePartsOfFood.resx">
       <DependentUpon>ChangePartsOfFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFood.resx">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePartsOfFood.resx">
+      <DependentUpon>DeletePartsOfFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindFood.resx">
+      <DependentUpon>FindFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPartsOfFood.resx">
+      <DependentUpon>FindPartsOfFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food.resx">
       <DependentUpon>Food.cs</DependentUpon>

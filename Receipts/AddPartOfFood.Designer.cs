@@ -39,6 +39,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -98,7 +99,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
-            this.button1.Location = new System.Drawing.Point(165, 149);
+            this.button1.Location = new System.Drawing.Point(165, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 31);
             this.button1.TabIndex = 11;
@@ -139,11 +140,22 @@
             this.textBox1.Size = new System.Drawing.Size(278, 19);
             this.textBox1.TabIndex = 7;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(153, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 23);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Ингредиент добавлен";
+            // 
             // AddPartOfFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 191);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

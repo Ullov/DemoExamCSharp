@@ -11,10 +11,9 @@ using System.Data.SqlClient;
 
 namespace Receipts
 {
-    public partial class ChangePartsOfFood : Form
+    public partial class DeletePartsOfFood : Form
     {
-        int pofId;
-        public ChangePartsOfFood()
+        public DeletePartsOfFood()
         {
             InitializeComponent();
 
@@ -29,7 +28,7 @@ namespace Receipts
         private void refreshFields()
         {
             DbHandler dbh = new DbHandler();
-            pofId = ((KeyValuePair<int, string>)comboBox3.SelectedItem).Key;
+            int pofId = ((KeyValuePair<int, string>)comboBox3.SelectedItem).Key;
             SqlDataReader sdr = dbh.read("select * from PartsOfFood where id=" + pofId);
             sdr.Read();
             textBox4.Text = sdr.GetInt32(2).ToString();
@@ -46,9 +45,9 @@ namespace Receipts
         private void button1_Click(object sender, EventArgs e)
         {
             DbHandler dbh = new DbHandler();
-            string query = "update PartsOfFood set nname = '" + comboBox3.Text + "', price = '" + textBox4.Text + "', energyOnGram = '" + textBox3.Text + "', measurementUnitsId = '" + ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key + "', howPrepareId = '" + ((KeyValuePair<int, string>)comboBox2.SelectedItem).Key + "' where id=" + pofId;
-            dbh.update(query);
+            dbh.delete("delete from PartsOfFood where id=" + ((KeyValuePair<int, string>)comboBox3.SelectedItem).Key);
             dbh.showHideLabel(label6);
+            dbh.addItemsToComboBox(comboBox3, 0, 1, "PartsOfFood", -1);
         }
     }
 }

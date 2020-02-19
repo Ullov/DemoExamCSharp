@@ -52,5 +52,29 @@ namespace Receipts
             ChangePartsOfFood cpof = new ChangePartsOfFood();
             cpof.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DeleteFood df = new DeleteFood();
+            df.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DeletePartsOfFood dpof = new DeletePartsOfFood();
+            dpof.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FindFood ff = new FindFood();
+            ff.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            FindPartsOfFood fpof = new FindPartsOfFood();
+            fpof.Show();
+        }
     }
 }

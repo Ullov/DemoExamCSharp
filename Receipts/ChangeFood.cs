@@ -13,6 +13,7 @@ namespace Receipts
 {
     public partial class ChangeFood : Form
     {
+        int currId;
         Timer timer;
         Dictionary<int, string> currentPartsOfFoodInfo = new Dictionary<int, string>();
         public ChangeFood()
@@ -32,7 +33,11 @@ namespace Receipts
         {
             DbHandler dbh = new DbHandler();
             currentPartsOfFoodInfo = dbh.refreshListBox(listBox1, "foodChange", (int)comboBox4.SelectedValue);
-            //dbh.serializePartsOfFood(currentPartsOfFoodInfo);
+            SqlDataReader sdr = dbh.read("select * from Food where id=" + (int)comboBox4.SelectedValue);
+            currId = (int)comboBox4.SelectedValue;
+            sdr.Read();
+            comboBox1.SelectedValue = sdr.GetInt32(1);
+            comboBox3.SelectedValue = sdr.GetInt32(3);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -48,6 +53,7 @@ namespace Receipts
         {
             string tmp = textBox2.Text;
             int tmpKey = (int)comboBox2.SelectedValue;
+            currentPartsOfFoodInfo.Remove(tmpKey);
             currentPartsOfFoodInfo.Add(tmpKey, tmp);
             textBox2.Text = "";
             listBox1.Items.Add(tmp + " x " + comboBox2.GetItemText(comboBox2.SelectedItem));
@@ -56,7 +62,7 @@ namespace Receipts
         private void button1_Click(object sender, EventArgs e)
         {
             DbHandler dbh = new DbHandler();
-            dbh.write("insert into Food (measurementUnitsId, howPrepareId, partsOfFood) values ('" + comboBox1.SelectedValue + "','" + comboBox3.SelectedValue + "','" + dbh.serializePartsOfFood(currentPartsOfFoodInfo) + "')");
+            dbh.update("update Food set nname = '" + comboBox4.Text + "', measurementUnitsId = '" + comboBox1.SelectedValue + "', howPrepareId = '" + comboBox3.SelectedValue + "', partsOfFood = '" + dbh.serializePartsOfFood(currentPartsOfFoodInfo) + "' where id =" + currId);
             listBox1.Items.Clear();
             label6.Visible = true;
             timer = new Timer();

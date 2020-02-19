@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -80,13 +80,6 @@
             this.label4.Size = new System.Drawing.Size(158, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Еденица измерения";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(194, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 19);
-            this.textBox1.TabIndex = 7;
             // 
             // textBox3
             // 
@@ -139,6 +132,13 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Способ приготовления";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(194, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(278, 19);
+            this.textBox1.TabIndex = 7;
+            // 
             // AddPartOfFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -168,12 +168,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -14,11 +14,12 @@ namespace Receipts
     public partial class AddFood : Form
     {
         Dictionary<int, int> ingredients = new Dictionary<int, int>();
+        Timer timer;
         public AddFood()
         {
             InitializeComponent();
-            label7.Text = "";
 
+            label6.Visible = false;
             DbHandler dbh = new DbHandler();
             dbh.addItemsToComboBox(comboBox3, 0, 1, "HowPrepare", 2);
             dbh.addItemsToComboBox(comboBox1, 0, 1, "MeasurementUnits", -1);
@@ -36,6 +37,12 @@ namespace Receipts
             DbHandler dbh = new DbHandler();
             dbh.write("insert into Food (measurementUnitsId, nname, howPrepareId, partsOfFood) values ('" + comboBox1.SelectedValue + "','" + textBox1.Text + "','" + comboBox3.SelectedValue + "','" + ingr + "')");
             textBox1.Text = "";
+            listBox1.Items.Clear();
+            label6.Visible = true;
+            timer = new Timer();
+            timer.Interval = 3000;
+            timer.Tick += hideLabel;
+            timer.Start();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,8 +53,15 @@ namespace Receipts
                 int tmpKey = Int32.Parse(comboBox2.SelectedValue.ToString());
                 ingredients.Add(tmp, tmpKey);
                 textBox2.Text = "";
+                listBox1.Items.Add(tmp + " x "  + comboBox2.GetItemText(comboBox2.SelectedItem));
             }
             catch {}
+        }
+
+        private void hideLabel(object sender, EventArgs e)
+        {
+            label6.Visible = false;
+            timer.Stop();
         }
     }
 }

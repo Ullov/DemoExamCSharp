@@ -73,6 +73,18 @@
     <Compile Include="AddPartOfFood.Designer.cs">
       <DependentUpon>AddPartOfFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeFood.Designer.cs">
+      <DependentUpon>ChangeFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePartsOfFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePartsOfFood.Designer.cs">
+      <DependentUpon>ChangePartsOfFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbHandler.cs" />
     <Compile Include="Food.cs">
       <SubType>Form</SubType>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddPartOfFood.resx">
       <DependentUpon>AddPartOfFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeFood.resx">
+      <DependentUpon>ChangeFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePartsOfFood.resx">
+      <DependentUpon>ChangePartsOfFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food.resx">
       <DependentUpon>Food.cs</DependentUpon>
